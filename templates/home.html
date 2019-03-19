@@ -1,0 +1,25 @@
+{% include "header.html" %}
+
+
+<html>
+	<head>
+	
+	</head>
+
+	<body>
+	<div class="jumbotron">
+		<h1 class="display-4"><b>{{mstring}}</b></h1>
+		<p class="lead">Please select the dashboard you want to view from the below options for {{month}}-{{year}}</p>
+	</div>
+		<div class="col-md-4">
+			<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('ssointernet') }}">SSO Internet</a>
+			<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('ssointranet') }}">SSO Intranet</a>
+			<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('inauthinternet') }}">InAuth Internet</a>
+			<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('inauthintranet') }}">InAuth Intranet</a>
+			<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('epassinternet') }}">Epass Internet</a>
+			<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('epassintranet') }}">Epass Intranet</a>
+			<a class="btn btn-primary btn-lg btn-block" href="{{ url_for('oauth') }}">OAuth</a>
+		</div>
+	</body>
+</html>
+	

@@ -1,0 +1,54 @@
+{% include "header.html" %}
+<html>
+	<head>
+		<title>
+		Oauth Dashboard
+		</title>	
+	</head>
+	
+	<body>
+		<div class="container">
+
+				<h2><b>Oauth Dashboard {{month}}-{{year}}</b></h2>
+				<table class="table table-hover">
+				  <thead>
+					<tr class="bg-danger">
+					  <th scope="col">Tier</th>
+					  <th scope="col">Historical Max</th>
+					  <th scope="col">Peak per day</th>
+					  <th scope="col">Average Hits per day</th>
+					  <th scope="col">Total Hits</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <th scope="row" class="bg-success">Hits</th>
+					  <td class="table-warning">10</td>
+					  <td class="table-danger">{{oauth_peak_hits}}</td>
+					  <td class="table-active">{{oauth_avg_hits}}</td>
+					  <td class="table-success">{{oauth_total_hits}}</td>	  
+					</tr>
+				  </tbody>
+				</table>
+			
+		</div>
+		<div class="container">
+			<div class=".col-10">
+				<table class="table table-hover">
+					<thead>
+						<tr class="bg-danger">
+							<th scope="col">Oauth Hits Trend</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="table-warning">
+								<img src={{oauth_hit_trend}} alt="Oauth Hits Trend">
+							</td>							
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

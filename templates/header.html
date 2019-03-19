@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<link  type="text/css" rel="stylesheet" href="/static/css/bootstrap.css"  media="all">
+		<script type="text/javascript" src="/static/js/jquery.js"></script>
+		<script type="text/javascript" src="/static/js/bootstrap.min.js" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="{{ url_for('index') }}">Dashboard</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dashboards
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="{{ url_for('ssointernet') }}">SSO Internet</a>
+							<a class="dropdown-item" href="{{ url_for('index') }}">SSO Intranet</a>
+							<a class="dropdown-item" href="{{ url_for('index') }}">InAuth Internet</a>
+							<a class="dropdown-item" href="{{ url_for('index') }}">InAuth Intranet</a>
+							<a class="dropdown-item" href="{{ url_for('index') }}">Epass Internet</a>
+							<a class="dropdown-item" href="{{ url_for('index') }}">Epass Intranet</a>
+							<a class="dropdown-item" href="{{ url_for('index') }}">OAuth</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>	
+	</body>
+</html>

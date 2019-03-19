@@ -1,0 +1,132 @@
+{% include "header.html" %}
+<html>
+	<head>
+		<title>
+		SSO Intranet Dashboard
+		</title>	
+	</head>
+	
+	<body>
+		<div class="container">
+
+				<h2><b>SSO Intranet Dashboard {{month}}-{{year}}</b></h2>
+				<table class="table table-hover">
+				  <thead>
+					<tr class="bg-danger">
+					  <th scope="col">Tier</th>
+					  <th scope="col">Historical Max</th>
+					  <th scope="col">Peak per day</th>
+					  <th scope="col">Average Hits per day</th>
+					  <th scope="col">Total Hits</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <th scope="row" class="bg-success">Web</th>
+					  <td class="table-warning">10</td>
+					  <td class="table-danger">{{web_peak_hits}}</td>
+					  <td class="table-active">{{web_avg_hits}}</td>
+					  <td class="table-success">{{web_total_hits}}</td>	  
+					</tr>
+					<tr>
+					  <th scope="row" class="bg-success">App</th>
+					  <td class="table-warning">10</td>
+					  <td class="table-danger">{{app_peak_hits}}</td>
+					  <td class="table-active">{{app_avg_hits}}</td>
+					  <td class="table-success">{{app_total_hits}}</td>	
+					</tr>
+					<tr>
+					  <th scope="row" class="bg-success">Policy</th>
+					  <td class="table-warning">10</td>
+					  <td class="table-danger">{{policy_peak_hits}}</td>
+					  <td class="table-active">{{policy_avg_hits}}</td>
+					  <td class="table-success">{{policy_total_hits}}</td>	
+					</tr>
+				  </tbody>
+				</table>
+			
+		</div>
+		<div class="container">
+			<div class=".col-10">
+				<table class="table table-hover">
+					<thead>
+						<tr class="bg-danger">
+							<th scope="col">SSO Intranet Web Hits Trend</th>
+							<th scope="col">SSO Intranet App Hits Trend</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="table-warning">
+								<img src={{intranet_web_hit_trend}} alt="SSO Intranet Web Hits Trend">
+							</td>
+							<td class="table-warning">
+								<img src={{intranet_app_hit_trend}} alt="SSO Intranet App Hits Trend">
+							</td>							
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="container">
+			<div class=".col-10">
+				<table class="table table-hover">
+					<thead>
+						<tr class="bg-danger">
+							<th scope="col">SSO Intranet Policy Hits Trend</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="table-warning">
+								<img src={{intranet_policy_hit_trend}} alt="SSO Intranet Policy Hits Trend">
+							</td>						
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+		</div>
+	
+		<div class="container">
+			<div class="col-md-8 offset-md-2">
+				<table class="table table-hover">
+				  <thead>
+					<tr class="bg-danger">
+					  <th scope="col">SSO Intranet Top Hitting Applications</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td class="table-warning">{{lines[0]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[1]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[2]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[3]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[4]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[5]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[6]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[7]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[8]}}</td>
+					</tr>
+					<tr>
+					  <td class="table-warning">{{lines[9]}}</td>
+					</tr>					
+			</div>
+		</div>
+	</body>
+</html>
